@@ -1,0 +1,17 @@
+.detail {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+}
+
+.image {
+    min-height: 300px;
+    max-height: 300px;
+    width: 200px;
+    margin-bottom: 0.5em;
+}
+
+.button {
+    width: 200px;
+}
