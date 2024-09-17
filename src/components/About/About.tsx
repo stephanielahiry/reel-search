@@ -11,7 +11,7 @@ const About: React.FC = () => {
                 individuals of all ages and abilities.
             </p>
 
-            <h3 className={styles.section_header}>Features for individuals who don't want to be frustrated when using software:</h3>
+            <h3 className={styles.section_header}>Features for individuals who don&apos;t want to be frustrated when using software:</h3>
             <p className={styles.section_paragraph}>
                 Not frustrating
                 Very simple design, not overwhelming or cluttered
@@ -40,7 +40,6 @@ const About: React.FC = () => {
             <p className={styles.section_paragraph}>Screen-reader ready</p>
         </section>
     )
-
 }
 
 export default About
