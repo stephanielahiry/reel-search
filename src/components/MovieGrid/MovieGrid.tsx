@@ -12,7 +12,7 @@ export interface MovieGridProps {
 const MovieGrid: React.FC<MovieGridProps> = ({ movies, searchQuery, isHomePage }: MovieGridProps) => {
 
 
-     if (movies.length === 0) {
+     if (movies?.length === 0) {
         return (
             <section className={styles.grid}>
                 <h2 className={styles.grid_header}>Your search did not return any results.</h2>
@@ -24,7 +24,7 @@ const MovieGrid: React.FC<MovieGridProps> = ({ movies, searchQuery, isHomePage }
                 <h2 className={styles.grid_header}>
                     {isHomePage
                         ? "Today's Popular Movies"
-                        : `Search Results for "${searchQuery}" (${movies.length} result${movies.length !== 1 ? "s" : ""})`
+                        : `Search Results for "${searchQuery}" (${movies?.length} result${movies?.length !== 1 ? "s" : ""})`
                     }
                 </h2>
                 <ul className={styles.grid_list}>

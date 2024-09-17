@@ -3,7 +3,7 @@ import { Movie } from '@/types/Movie';
 export function formatMovie(movie: Movie): Movie {
   return {
     ...movie,
-    formattedGenres: movie.genres && movie.genres.length > 0 
+    formattedGenres: movie.genres && movie.genres?.length > 0 
       ? movie.genres.map((genre: { name: string }) => genre.name).join(', ') 
       : null,
     formattedDate: movie.release_date

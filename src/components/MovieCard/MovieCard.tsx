@@ -9,7 +9,7 @@ export interface MovieCardProps {
 
 const MovieCard: React.FC<MovieCardProps> = ({ movie }: MovieCardProps) => {
   const { overview, poster_path, id, title } = movie;
-  const truncatedText = overview && overview.length > 100 
+  const truncatedText = overview && overview?.length > 100 
     ? overview.slice(0, 100) + '...' 
     : movie.overview;
   const image = poster_path 
