@@ -1,5 +1,7 @@
 import Header from '@/components/Header/Header';
+import Loading from '@/components/Loading/Loading';
 import '@/styles/globals.scss';
+import { Suspense } from 'react';
 
 export const metadata = {
   title: 'Movie Finder',
@@ -14,10 +16,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Header></Header>
-        <main>
-            {children}
-        </main>
+        <Suspense fallback={<Loading loadingText={"Loading..."}/>}>
+          <Header></Header>
+          <main>
+              {children}
+          </main>
+        </Suspense>
       </body>
     </html>
   )
