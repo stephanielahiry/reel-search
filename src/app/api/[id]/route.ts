@@ -12,6 +12,12 @@ export async function GET(req: Request, { params }: { params: { id: string } }) 
     const formattedData: Movie = formatMovie(data);
     return NextResponse.json(formattedData);
   } catch (error) {
-    return NextResponse.json({ error: 'Failed to fetch movie details' }, { status: 500 });
+    if (error instanceof Error) {
+      console.error('Error fetching data:', error);
+      return NextResponse.json({ error: 'Failed to fetch movie details', details: error.message }, { status: 500 });
+  } else {
+      console.error('Unexpected error:', error);
+      return NextResponse.json({ error: 'Failed to fetch movie details', details: 'An unexpected error occurred' }, { status: 500 });
+  }
   }
 }

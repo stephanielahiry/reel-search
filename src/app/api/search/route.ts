@@ -12,7 +12,13 @@ export async function GET(req: Request) {
     const data: {results: Movie[]} = await apiFetch(endpoint) as {results: Movie[]};
     return NextResponse.json(data.results);
   } catch (error) {
-    return NextResponse.json({ error: 'Failed to fetch search results' }, { status: 500 });
+    if (error instanceof Error) {
+      console.error('Error fetching data:', error);
+      return NextResponse.json({ error: 'Failed to fetch search results', details: error.message }, { status: 500 });
+  } else {
+      console.error('Unexpected error:', error);
+      return NextResponse.json({ error: 'Failed to fetch search results', details: 'An unexpected error occurred' }, { status: 500 });
+  }
   }
 }
 
