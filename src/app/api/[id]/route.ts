@@ -14,10 +14,10 @@ export async function GET(req: Request, { params }: { params: { id: string } }) 
   } catch (error) {
     if (error instanceof Error) {
       console.error('Error fetching data:', error);
-      return NextResponse.json({ error: 'Failed to fetch movie details', details: error.message }, { status: 500 });
+      return NextResponse.json({ error: 'Failed to fetch movie details', details: error.message });
   } else {
       console.error('Unexpected error:', error);
-      return NextResponse.json({ error: 'Failed to fetch movie details', details: 'An unexpected error occurred' }, { status: 500 });
+      return NextResponse.json({ error: 'Failed to fetch movie details', details: 'An unexpected error occurred' });
   }
   }
 }
