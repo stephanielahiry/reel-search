@@ -2,7 +2,6 @@
 
 import Loading from "@/components/Loading/Loading";
 import MovieGrid from "@/components/MovieGrid/MovieGrid";
-import { Suspense } from "react";
 import useSWR from "swr";
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());

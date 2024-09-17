@@ -13,31 +13,31 @@ const About: React.FC = () => {
 
             <h3 className={styles.section_header}>Features for individuals who don&apos;t want to be frustrated when using software:</h3>
             <p className={styles.section_paragraph}>
-                Not frustrating
-                Very simple design, not overwhelming or cluttered
-                Can easily navigate back and forth
-                Language is clear, simple, and non-technical
-                Conventions like symbols and icons that are more familiar to younger generations were not used, 
-                for example ellipses or hamburger icons, and instead clearly labeled buttons with text
+                The design prioritizes simplicity and ease of use to avoid frustration. 
+                It features a clean, uncluttered layout, allowing users to navigate back and forth effortlessly. 
+                The language is kept clear, simple, and non-technical. 
+                Familiar symbols or icons often targeted at younger generations, like ellipses or hamburger menus, are avoided. 
+                Instead, the interface uses clearly labeled buttons with text to enhance understanding and usability for all users.
             </p>
 
             <h3 className={styles.section_header}>Features for individuals with impaired motor skills:</h3>
             <p className={styles.section_paragraph}>
-                Important actions are located close in vicinity to eachother, so that a person doesnt have to move
-                around their mouse too much, no complex movements or gestures like click-hold-drag, swiping,
-                or holding constantly down on buttons to make things work. nothing that requires a great amount 
-                of coordination, large touch targets, keyboard navigation with tab
+                Important actions are placed close to each other, minimizing the need for excessive mouse movement. 
+                The design avoids complex gestures or actions, such as click-and-drag, swiping, or holding buttons down 
+                for extended periods of time. There are also no tasks that demand high levels of coordination. 
+                The interface includes large touch targets and supports easy keyboard navigation with the tab key, 
+                ensuring accessibility for users with limited motor skills.
             </p>
 
             <h3 className={styles.section_header}>Features for the visually impaired:</h3>
             <p className={styles.section_paragraph}>
-                large text, high contrast, light, bright background for people losing sensitivity to brightness
-                greys and neutral colors for colorblindness, focus indicators, animations, large touch targets,
-                large buttons and input fields
+                The design includes large text and high contrast to ensure readability, with a light-colored, 
+                bright background to aid those losing sensitivity to brightness. 
+                For individuals with colorblindness, greys and neutral colors are used to enhance visibility. 
+                Additionally, large touch targets, buttons, and input fields are provided to make 
+                interaction easier for users with visual impairments.
+                The design relies on semantic HTML to allow screen-reading software to easily navigate the application.
             </p>
-
-            <h3 className={styles.section_header}>Features for the hearing impaired:</h3>
-            <p className={styles.section_paragraph}>Screen-reader ready</p>
         </section>
     )
 }

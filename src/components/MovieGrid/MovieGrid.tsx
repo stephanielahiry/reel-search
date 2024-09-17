@@ -11,8 +11,7 @@ export interface MovieGridProps {
 
 const MovieGrid: React.FC<MovieGridProps> = ({ movies, searchQuery, isHomePage }: MovieGridProps) => {
 
-
-     if (movies?.length === 0) {
+    if (movies?.length === 0) {
         return (
             <section className={styles.grid}>
                 <h2 className={styles.grid_header}>Your search did not return any results.</h2>
@@ -39,7 +38,6 @@ const MovieGrid: React.FC<MovieGridProps> = ({ movies, searchQuery, isHomePage }
             </section>
         );
     }
-
 }
 
 export default MovieGrid;

@@ -19,7 +19,6 @@ const MovieDetailPage: React.FC = () => {
   );
 
   useEffect(() => {
-      // Scroll to top on component mount
       window.scrollTo(0, 0);
   }, [movieId]);
     

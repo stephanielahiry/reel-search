@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Movie Finder
+
+Movie Finder is a [Next.js](https://nextjs.org/) application designed to help users search for movies. It is bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+## Table of Contents
+
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Learning Resources](#learn-more)
+- [Deployment](#deploy-on-vercel)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Getting Started
 
-First, run the development server:
+To get started with Movie Finder, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. **Clone the Repository**:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+    ```bash
+    git clone https://github.com/stephanielahiry/movie-finder.git
+    cd movie-finder
+    ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. **Install Dependencies**:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+    ```bash
+    npm install
+    # or
+    yarn install
+    # or
+    pnpm install
+    # or
+    bun install
+    ```
+
+3. **Run the Development Server**:
+
+    ```bash
+    npm run dev
+    # or
+    yarn dev
+    # or
+    pnpm dev
+    # or
+    bun dev
+    ```
+
+    Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+
+4. **Start Editing**:
+
+    You can start editing the page by modifying `app/page.tsx`. The page will auto-update as you save your changes.
+
+## Project Structure
+
+Here’s a brief overview of the key directories and files:
+
+- **`app/`**: Contains your application's pages and components.
+- **`public/`**: Static assets like images and fonts.
+- **`styles/`**: CSS or SCSS files for styling.
+- **`next.config.js`**: Configuration for Next.js.
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+To deepen your knowledge of Next.js, explore the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Next.js Documentation](https://nextjs.org/docs) - Learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - An interactive tutorial to get hands-on with Next.js.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Deploying your Next.js app is straightforward with the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme), created by the makers of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+For detailed instructions on deployment, visit our [Next.js deployment documentation](https://nextjs.org/docs/deployment).
+
+## Contributing
+
+We welcome contributions to Movie Finder! To get started:
+
+1. **Fork the Repository**.
+2. **Create a Feature Branch** (`git checkout -b feature/your-feature`).
+3. **Commit Your Changes** (`git commit -am 'Add some feature'`).
+4. **Push to the Branch** (`git push origin feature/your-feature`).
+5. **Create a New Pull Request**.
+
+Please make sure your code adheres to our coding standards and includes appropriate tests.
+
+## License
+
+Movie Finder is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
