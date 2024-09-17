@@ -56,10 +56,9 @@ To get started with Movie Finder, follow these steps:
 
 Here’s a brief overview of the key directories and files:
 
-- **`app/`**: Contains your application's pages and components.
-- **`public/`**: Static assets like images and fonts.
-- **`styles/`**: CSS or SCSS files for styling.
-- **`next.config.js`**: Configuration for Next.js.
+- **`app/`**: Contains the application's pages and components.
+- **`public/`**: Contains static assets like images and fonts.
+- **`styles/`**: Contains SCSS files for styling.
 
 ## Learn More
 
