@@ -6,7 +6,7 @@ import { BASE_URL } from '@/app/constants';
 
 export async function GET(req: Request, { params }: { params: { id: string } }) {
   const { id } = params;
-  const endpoint = `${BASE_URL}/movie/${id}?api_key=${process.env.NEXT_PUBLIC_API_KEY}`;
+  const endpoint = `${BASE_URL}/movie/${id}?api_key=${process.env.API_KEY}`;
   try {
     const data: Movie = await apiFetch(endpoint);
     const formattedData: Movie = formatMovie(data);
