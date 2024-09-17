@@ -1,0 +1,17 @@
+.loading {
+    display: flex;
+    justify-content: center;
+
+    &_text {
+        animation: fade 3s ease-in-out infinite;
+    }
+}
+
+@keyframes fade {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}

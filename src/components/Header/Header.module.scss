@@ -1,13 +1,84 @@
 .header {
-    background-color: var(--secondary-background);
-    padding: 0.3em 0.75em;
-    display: flex;
-    gap: 0.75em;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     z-index: 1000;
-    font-size: 2.75em;
-}  
+    font-size: 2.25rem;
+
+    &_main {
+        background-color: var(--secondary-background);
+        padding: 0.3em 0.75em;
+        display: flex;
+        gap: 0.75em;
+    
+        &Link {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.75rem;
+        }
+    
+        &Image {
+            margin-top: 0.4rem;
+        }
+    }  
+
+    &_navigation {
+        border-top: 2px solid var(--blue);
+        background-color: var(--menu-background);
+        border-bottom: 2px solid var(--blue);
+
+        &List {
+            padding-inline: 1.8rem;
+            display: flex;
+            gap: 1rem;
+        
+            & a {
+                color: var(--dark-blue);
+            }
+        }
+
+        &Item {
+            font-size: 1.2rem;
+            color: var(--background-color);
+            list-style-type: none;
+        }
+
+    }
+}
+
+@media (max-width: 760px) {
+    .header {
+        font-size: 1.75rem;
+    
+        &_main {
+            flex-direction: column;
+            align-items: center;
+            gap: 0.1em;
+            padding: 0.8rem 0.2rem 1.4rem;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        font-size: 1.5rem;
+
+        &_main {
+            flex-direction: column;
+            align-items: center;
+            gap: 0.1em;
+            padding: 0.6rem 0.2rem 1.2rem;
+        }
+
+        &_navigation {
+            display: flex;
+            justify-content: center;
+
+            &Item {
+                font-size: 1rem;
+            }
+        }
+    }
+}

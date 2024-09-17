@@ -1,5 +1,5 @@
-import Header from "../components/Header/Header";
-import '../styles/globals.scss';
+import Header from '@/components/Header/Header';
+import '@/styles/globals.scss';
 
 export const metadata = {
   title: 'Movie Finder',
@@ -14,9 +14,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-          <Header></Header>
-          <main>{children}</main>
+        <Header></Header>
+        <main>
+            {children}
+        </main>
       </body>
     </html>
   )
 }
+
