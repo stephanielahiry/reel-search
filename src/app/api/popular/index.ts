@@ -1,13 +1,11 @@
+import { apiFetch } from '@/api/apiFetch';
 import { BASE_URL } from '@/app/constants';
 import { NextResponse } from 'next/server';
 
 export async function GET() {
-    const endpoint = `${BASE_URL}/movie/popular?api_key=${process.env.NEXT_PUBLIC_API_KEY}`;
-    
+    const endpoint = `${BASE_URL}/movie/popular?api_key=${process.env.NEXT_PUBLIC_API_KEY}`; 
     try {
-        const response = await fetch(endpoint);
-        if (!response.ok) throw new Error('Error fetching data!');
-        const data = await response.json();
+        const data = await apiFetch(endpoint);  
         return NextResponse.json(data);
     } catch (error) {
         if (error instanceof Error) {
@@ -19,3 +17,4 @@ export async function GET() {
         }
     }
 }
+  
