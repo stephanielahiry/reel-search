@@ -1,5 +1,6 @@
 import Header from '@/components/Header/Header';
 import '@/styles/globals.scss';
+import { Suspense } from 'react';
 
 export const metadata = {
   title: 'Movie Finder',
@@ -12,14 +13,16 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body>
-        <Header></Header>
-        <main>
-            {children}
-        </main>
-      </body>
-    </html>
+    <Suspense>
+      <html lang="en">
+        <body>
+          <Header></Header>
+          <main>
+              {children}
+          </main>
+        </body>
+      </html>
+    </Suspense>
   )
 }
 

@@ -1,8 +1,8 @@
 import { NextResponse } from 'next/server';
-import { BASE_URL } from '@/app/constants';
 import { apiFetch } from '@/api/apiFetch';
 import { Movie } from '@/types/Movie';
 import { formatMovie } from '@/api/formatMovie';
+import { BASE_URL } from '@/app/constants';
 
 export async function GET(req: Request, { params }: { params: { id: string } }) {
   const { id } = params;
