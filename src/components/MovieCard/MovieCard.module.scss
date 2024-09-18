@@ -69,3 +69,17 @@
         }
     }
 }
+
+// Media query to handle touch devices and coarse pointers
+@media (hover: none) and (pointer: coarse) {
+    .card {
+        &:hover {
+            transform: none;
+        }
+
+        .card_overview {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+}
