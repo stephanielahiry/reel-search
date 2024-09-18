@@ -1,6 +1,10 @@
 .section {
     max-width: 1000px;
 
+    &_button {
+        margin-bottom: 1rem;
+    }
+
     &_detail {
         display: grid;
         gap: 2em;

@@ -5,13 +5,19 @@ import { Movie } from '../../types/Movie';
 
 export interface MovieDetailProps {
     movie: Movie;
+    goBack: () => void;
 };
 
-const MovieDetail: React.FC<MovieDetailProps> = ({ movie }: MovieDetailProps) => {
+const MovieDetail: React.FC<MovieDetailProps> = ({ movie, goBack }: MovieDetailProps) => {
     const { title, imageURL, formattedDate, formattedGenres, formattedOverview, runtime } = movie;
 
     return (
         <section className={styles.section}>
+            <button 
+                className={styles.section_button}
+                onClick={goBack}>
+                Go Back
+            </button>
             <h2 className={styles.section_title}>Movie Details for {title}</h2>
             <div className={styles.section_detail}>
                 <div>

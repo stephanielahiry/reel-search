@@ -43,16 +43,6 @@ const Header: React.FC = () => {
                             Popular
                         </Link>
                     </li>
-                    <li className={styles.header_navigationItem}>
-                        <Link
-                            href="#"
-                            onClick={(e) => {
-                                e.preventDefault();
-                                router.back();
-                            }}>
-                            Go Back
-                        </Link>
-                    </li>
                 </ul>
             </nav>
         </header>
