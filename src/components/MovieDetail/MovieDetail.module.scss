@@ -32,6 +32,11 @@
 
 @media (max-width: 760px) {
     .section {
+
+        &_button {
+            margin-top: 0.5rem;
+        }
+        
         &_detail {
             gap: 1.3rem;
     
