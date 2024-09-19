@@ -4,27 +4,27 @@ import Link from 'next/link';
 import Search from '../Search/Search';
 import styles from './Header.module.scss';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
 
 const Header: React.FC = () => {
-    const router = useRouter();
 
     return (
         <header className={styles.header}>
-            <div className={styles.header_main}>
-                <Link
-                    className={styles.header_mainLink}
-                    href="/">
-                    <div className={styles.header_mainImage}>
-                        <Image
-                            src="/movie-icon.svg"
-                            alt="Movie Finder Icon"
-                            width={40}
-                            height={40} />
-                    </div>
-                    Movie Finder
-                </Link>
-                <Search />
+            <div className={styles.header_container}>
+                <div className={styles.header_main}>
+                    <Link
+                        className={styles.header_mainLink}
+                        href="/">
+                        <div className={styles.header_mainImage}>
+                            <Image
+                                src="/movie-icon.svg"
+                                alt="Movie Finder Icon"
+                                width={40}
+                                height={40} />
+                        </div>
+                        Movie Finder
+                    </Link>
+                    <Search />
+                </div>
             </div>
             <nav className={styles.header_navigation}>
                 <ul className={styles.header_navigationList}>

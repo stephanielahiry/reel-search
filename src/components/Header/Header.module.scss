@@ -5,9 +5,9 @@
     width: 100%;
     z-index: 1000;
     font-size: 2.25rem;
+    background-color: var(--secondary-background);
 
     &_main {
-        background-color: var(--secondary-background);
         padding: 0.3em 0.75em;
         display: flex;
         gap: 0.75em;
@@ -48,6 +48,8 @@
     }
 }
 
+// Styles for tablets
+
 @media (max-width: 760px) {
     .header {
         font-size: 1.75rem;
@@ -64,6 +66,8 @@
         }
     }
 }
+
+// Styles for mobile devices
 
 @media (max-width: 480px) {
     .header {

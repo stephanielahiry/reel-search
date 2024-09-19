@@ -10,7 +10,7 @@ const Search: React.FC = () => {
     const router = useRouter();
     const [searchQuery, setSearchQuery] = useState<string>(initialSearchQuery);
 
-    const onSearch = (event: React.FormEvent<HTMLFormElement>): void => {
+    const onSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
         event.preventDefault();
         const encodedSearchQuery = encodeURI(searchQuery);
         router.push(`/search?q=${encodedSearchQuery}`);
@@ -19,7 +19,7 @@ const Search: React.FC = () => {
     return (
         <form 
             className={styles.form} 
-            onSubmit={onSearch}>
+            onSubmit={onSubmit}>
             <input
                 className={styles.input}
                 value={searchQuery}

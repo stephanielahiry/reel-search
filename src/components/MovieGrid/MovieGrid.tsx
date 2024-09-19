@@ -5,11 +5,10 @@ import styles from "./MovieGrid.module.scss";
 
 export interface MovieGridProps {
     movies: Movie[];
-    searchQuery?: string | null;
-    isHomePage?: boolean;
+    headerText?: string;
 };
 
-const MovieGrid: React.FC<MovieGridProps> = ({ movies, searchQuery, isHomePage }: MovieGridProps) => {
+const MovieGrid: React.FC<MovieGridProps> = ({ movies, headerText }: MovieGridProps) => {
 
     if (movies?.length === 0) {
         return (
@@ -20,12 +19,7 @@ const MovieGrid: React.FC<MovieGridProps> = ({ movies, searchQuery, isHomePage }
     } else {
         return (
             <section className={styles.grid}>
-                <h2 className={styles.grid_header}>
-                    {isHomePage
-                        ? "Today's Popular Movies"
-                        : `Search Results for "${searchQuery}" (${movies?.length} result${movies?.length !== 1 ? "s" : ""})`
-                    }
-                </h2>
+                <h2 className={styles.grid_header}>{headerText}</h2>
                 <ul className={styles.grid_list}>
                     {movies?.map((movie) => (
                         <li key={movie.id} className={styles.grid_item}>

@@ -9,10 +9,14 @@ export async function GET() {
     } catch (error) {
         if (error instanceof Error) {
             console.error('Error fetching data:', error);
-            return NextResponse.json({ error: 'Failed to fetch popular movies', details: error.message });
+            return NextResponse.json({ 
+                error: 'Failed to fetch popular movies', 
+                details: error.message });
         } else {
             console.error('Unexpected error:', error);
-            return NextResponse.json({ error: 'Failed to fetch popular movies', details: 'An unexpected error occurred' });
+            return NextResponse.json({ 
+                error: 'Failed to fetch popular movies', 
+                details: 'An unexpected error occurred' });
         }
     }
 }

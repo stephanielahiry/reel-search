@@ -30,7 +30,8 @@ const MovieDetail: React.FC<MovieDetailProps> = ({ movie, goBack }: MovieDetailP
                 <div className={styles.section_content}>
                     {formattedGenres && (
                         <div>
-                            <span className={styles.section_label}>Genre:</span> {formattedGenres}
+                            <span className={styles.section_label}>Genre: </span> 
+                            {formattedGenres}
                         </div>
                     )}
                     <div>
@@ -39,19 +40,20 @@ const MovieDetail: React.FC<MovieDetailProps> = ({ movie, goBack }: MovieDetailP
                     </div>
                     {runtime != null && runtime > 0 && (
                         <div>
-                            <strong className={styles.section_label}>Runtime:</strong> {runtime} {runtime === 1 ? "Minute" : "Minutes"}
+                            <strong className={styles.section_label}>Runtime: </strong> 
+                            {runtime} {runtime === 1 ? "Minute" : "Minutes"}
                         </div>
                     )}
                     {formattedDate && (
                         <div className={styles.section_genres}>
-                            <span className={styles.section_label}>Release Date:</span> {formattedDate}
+                            <span className={styles.section_label}>Release Date: </span> 
+                            {formattedDate}
                         </div>
                     )}
                 </div>
             </div>
         </section>
     );
-
 }
 
 export default MovieDetail;

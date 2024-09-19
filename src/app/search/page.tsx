@@ -14,11 +14,12 @@ const SearchPage: React.FC = () => {
     searchQuery ? `/api/search?search=${searchQuery}` : null, 
     fetcher
   );
+  const headerText = `Search Results for "${searchQuery}" (${movies?.length} result${movies?.length !== 1 ? "s" : ""})`;
 
   return (
     <>
       {isLoading && <Loading loadingText={'Loading search results...'}/>}
-      {movies && <MovieGrid movies={movies} searchQuery={searchQuery}/>}
+      {movies && <MovieGrid headerText={headerText} movies={movies}/>}
       {error && <h2>There was an error loading movies.</h2>}
     </>
   );

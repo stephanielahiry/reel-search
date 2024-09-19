@@ -7,7 +7,7 @@
 
     &_detail {
         display: grid;
-        gap: 2em;
+        gap: 2rem;
         grid-template-columns: auto 1fr;
     }
 
@@ -20,7 +20,7 @@
     &_image {
         height: auto;
         width: 275px;
-        margin-bottom: 0.5em;
+        margin-bottom: 0.5rem;
         border-radius: 8px;
         box-shadow: 0 4px 8px var(--box-shadow); 
     }
@@ -30,13 +30,15 @@
     }
 }
 
-@media (max-width: 760px) {
-    .section {
+// Styles for tablets
 
+@media (max-width: 760px) {
+
+    .section {
         &_button {
             margin-top: 0.5rem;
         }
-        
+
         &_detail {
             gap: 1.3rem;
     
@@ -46,7 +48,10 @@
             width: 175px;
         } 
     }
+
 }
+
+// Styles for mobile devices
 
 @media (max-width: 480px) {
     .section {
