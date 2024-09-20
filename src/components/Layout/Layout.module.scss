@@ -1,0 +1,26 @@
+.container {
+  max-width: 1890px;
+  margin: auto;
+  padding-inline: 3.5rem;
+  padding-top: 2rem;
+
+  &_content {
+    margin-top: 3rem;
+  }
+}
+
+// Styles for tablets
+
+@media (max-width: 760px) {
+
+  .container {
+    padding-top: 0.5rem;
+    padding-inline: 1rem;
+
+    &_content {
+      margin-top: 3rem;
+    }
+
+  }
+
+}

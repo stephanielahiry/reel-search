@@ -23,7 +23,7 @@ const MovieGrid: React.FC<MovieGridProps> = ({ movies, headerText }: MovieGridPr
                 <ul className={styles.grid_list}>
                     {movies?.map((movie) => (
                         <li key={movie.id} className={styles.grid_item}>
-                            <Link href={`/${movie.id}`}>
+                            <Link href={`/${movie.id}`} className={styles.grid_link}>
                                 <MovieCard movie={movie} />
                             </Link>
                         </li>

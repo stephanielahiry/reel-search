@@ -1,9 +1,9 @@
 "use client"
 
 import Link from 'next/link';
+import Image from 'next/image';
 import Search from '../Search/Search';
 import styles from './Header.module.scss';
-import Image from 'next/image';
 
 const Header: React.FC = () => {
 

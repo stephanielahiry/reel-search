@@ -31,11 +31,6 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie }: MovieCardProps) => {
           <p>{truncatedText}</p>
         </div>
       </div>
-      <div
-        className={styles.card_title}
-        id={`movie-title-${id}`}>
-        {title}
-      </div>
     </div>
   );
 }

@@ -1,16 +1,24 @@
 :root {
-  --primary-color: rgba(100, 130, 217, 0.95);
-  --background-color: #FAFAFA;
+  --primary-color: #6482d9f2;
+  --background-color: #fdfdfd;
   --secondary-background: #F0F0F0;
-  --text-color: rgba(57, 66, 93, 0.95);
+  --text-color: #4d4d4d;
   --accent-color: #b54c43;
-  --dark-blue: rgba(57, 66, 93, 0.95);
-  --blue: rgba(57, 66, 93, 0.95);
+  --dark-blue: #4d4d4d;
+  --blue: #4d4d4d;
   --light-grey: #cccccc;
   --medium-grey: #666666;
-  --card-background: rgba(57, 66, 93, 0.95);
-  --box-shadow: rgba(0, 0, 0, 0.2);
-  --menu-background: rgb(222, 222, 225);
+  --card-background: rgba(77, 77, 77, 0.85);
+
+  --color-lightest-gray: #e9e9e9; /* (233, 233, 233) */
+  --color-lighter-gray: #e1e1e1; /* (225, 225, 225) */
+  --color-light-gray: #d0d0d0; /* (208, 208, 208) */
+  --color-medium-gray: #b4b4b4; /* (180, 180, 180) */
+  --color-dark-gray: #808080; /* (128, 128, 128) */
+  --color-lighter-2: #f2f2f2; /* (242, 242, 242) */
+  --color-lighter-1: #ebebeb; /* (235, 235, 235) */
+  --color-darker-1: #666666; /* (102, 102, 102) */
+  --color-darker-2: #4d4d4d; /* (77, 77, 77) */
 }
 
 * {
@@ -25,12 +33,10 @@ html {
 
 body {
   font-size: 1rem;
-  line-height: 1.5;
 }
 
 html, body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+  line-height: 1.5;
   color: var(--text-color);
   background-color: var(--background-color);
   min-height: 100vh;
@@ -39,15 +45,6 @@ html, body {
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
   color: var(--text-color);
-}
-
-main {
-  margin: 10rem 3rem 1rem;
-}
-
-section {
-  margin-left: auto;
-  margin-right: auto;
 }
 
 a {
@@ -70,7 +67,7 @@ button {
   transition: background-color 0.3s;
 
   &:hover {
-    background-color: var(--dark-blue);
+    background-color: #808080;
   }
 
   &:disabled {
@@ -87,12 +84,11 @@ input {
   border: 2px solid var(--light-grey);
   border-radius: 4px;
   width: 100%;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   transition: border-color 0.3s;
 
   &:focus {
-      border-color: var(--primary-color); 
-      outline: none;
+    border-color: var(--primary-color);
+    outline: none;
   }
 
   &::placeholder {
@@ -101,21 +97,17 @@ input {
   }
 }
 
-@media (max-width: 768px) {
-  main {
-    margin: 12.75rem 3rem 1rem;
-  }
+// Styles for tablets
 
+@media (max-width: 768px) {
   button, input {
     font-size: 1rem;
   }
 }
 
-@media (max-width: 480px) {
-  main {
-    margin: 12rem 2rem 1rem;
-  }
+// Styles for mobile
 
+@media (max-width: 480px) {
   button, input {
     font-size: 0.8rem;
   }

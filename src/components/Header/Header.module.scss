@@ -1,22 +1,19 @@
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
-    z-index: 1000;
     font-size: 2.25rem;
-    background-color: var(--secondary-background);
 
     &_main {
-        padding: 0.3em 0.75em;
+        width: 100%;
         display: flex;
-        gap: 0.75em;
+        justify-content: space-between;
     
         &Link {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            gap: 0.75rem;
+            gap: 0.45rem;
+            color: #b4b4b4;
+            font-weight: 600;
         }
     
         &Image {
@@ -25,12 +22,8 @@
     }  
 
     &_navigation {
-        border-top: 2px solid var(--blue);
-        background-color: var(--menu-background);
-        border-bottom: 2px solid var(--blue);
 
         &List {
-            padding-inline: 1.8rem;
             display: flex;
             gap: 1rem;
         
@@ -40,10 +33,10 @@
         }
 
         &Item {
+            font-weight: lighter;
             font-size: 1.2rem;
             color: var(--background-color);
             list-style-type: none;
-            padding: 0.3rem;
         }
     }
 }

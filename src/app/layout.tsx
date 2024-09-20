@@ -1,7 +1,8 @@
-import Header from '@/components/Header/Header';
 import Loading from '@/components/Loading/Loading';
 import '@/styles/globals.scss';
 import { Suspense } from 'react';
+import manrope from "@/app/fonts";
+import Layout from "@/components/Layout/Layout";
 
 export const metadata = {
   title: 'Movie Finder',
@@ -14,13 +15,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={manrope.className}>
       <body>
         <Suspense fallback={<Loading loadingText={"Loading..."}/>}>
-          <Header></Header>
-          <main>
-              {children}
-          </main>
+          <Layout>{children}</Layout>
         </Suspense>
       </body>
     </html>
