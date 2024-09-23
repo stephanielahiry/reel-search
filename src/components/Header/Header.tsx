@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Search from '../Search/Search';
 import styles from './Header.module.scss';
-import { limelight } from "@/app/fonts";
+import {limelight, pacifico} from "@/app/fonts";
 import TextResize from "@/components/TextResize/TextResize";
 
 const Header: React.FC = () => {
@@ -23,7 +23,7 @@ const Header: React.FC = () => {
                                 width={40}
                                 height={40}/>
                         </div>
-                        <span className={limelight.className}>Reel Search</span>
+                        <span className={pacifico.className}>Reel Search</span>
                     </Link>
                 </div>
             </div>
