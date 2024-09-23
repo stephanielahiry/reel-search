@@ -21,12 +21,10 @@ const Search: React.FC = () => {
             className={styles.form} 
             onSubmit={onSubmit}>
             <input
-                className={styles.input}
                 value={searchQuery}
                 onChange={(event: React.ChangeEvent<HTMLInputElement>): void => setSearchQuery(event.target.value)}
                 placeholder="Enter a Movie Title..."/>
-            <button 
-                className={styles.button} 
+            <button
                 type="submit"
                 disabled={searchQuery.trim() === ""}>
                 Search

@@ -33,10 +33,6 @@
         margin-bottom: 1.5rem;
         position: relative;
 
-        &Text {
-            //margin-left: -0.1rem;
-        }
-
         &::before {
             content: '';
             position: absolute;
@@ -63,8 +59,6 @@
         width: 275px;
         margin-bottom: 0.5rem;
         border: 2px solid var(--medium-grey);
-        //border-radius: 8px;
-        //box-shadow: 0 4px 8px var(--box-shadow);
     }
 
     &_label {

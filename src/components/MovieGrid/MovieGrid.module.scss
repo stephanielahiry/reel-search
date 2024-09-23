@@ -31,16 +31,19 @@
 // Styles for tablets
 
 @media (max-width: 760px) {
+
     .grid {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
 }
 
 // Styles for mobile devices
 
 @media (min-width: 565px) {
+
     .grid {
         &_link {
             min-width: 200px;
@@ -48,4 +51,5 @@
             aspect-ratio: 2 / 3;
         }
     }
+
 }

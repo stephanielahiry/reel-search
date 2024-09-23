@@ -18,7 +18,6 @@ const MovieDetail: React.FC<MovieDetailProps> = ({ movie, goBack }: MovieDetailP
                 className={styles.section_link}
                 onClick={goBack}>
                 <Image
-                    className={styles.section_linkIcon}
                     src="/back-arrow.svg"
                     alt="Previous Page Icon"
                     width={30}
@@ -52,7 +51,7 @@ const MovieDetail: React.FC<MovieDetailProps> = ({ movie, goBack }: MovieDetailP
                         </div>
                     )}
                     {formattedDate && (
-                        <div className={styles.section_genres}>
+                        <div>
                             <span className={styles.section_label}>Release Date: </span> 
                             {formattedDate}
                         </div>

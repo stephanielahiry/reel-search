@@ -63,7 +63,8 @@ const Header: React.FC = () => {
                 <TextResize/>
             </div>
         </header>
-)
+    )
+
 }
 
 export default Header
