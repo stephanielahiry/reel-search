@@ -1,30 +1,33 @@
 .card {
-    $border-radius: 8px;
-    transition: transform 200ms ease-in-out;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    align-items: stretch;
+    transition: transform 200ms ease-in-out;
 
     &:hover {
-        transform: scale(1.05);
-        text-decoration: none !important;
+        transform: translateY(-5px);
+        box-shadow: -7px 7px 0 var(--light-grey);
+
+        .card_overview {
+            backdrop-filter: blur(20px);
+            background-color: rgba(0, 0, 0, 0.3);
+            opacity: 1;
+            visibility: visible;
+        }
     }
 
     &_content {
         position: relative;
-        border-radius: $border-radius;
         overflow: hidden;
         flex-grow: 1;
         display: flex;
-        align-items: stretch;
     }
 
     &_image {
         width: 100%;
         height: 100%;
         object-fit: fill;
-        border-radius: $border-radius;
+        border: 2px solid var(--medium-grey);
     }
 
     &_overview {
@@ -47,36 +50,24 @@
         font-weight: bold;
         margin-bottom: 0.3rem;
     }
-
-    &:hover .card_overview {
-        opacity: 1;
-        visibility: visible;
-    }
 }
 
-// Styles for mobile devices
-
-@media (max-width: 565px) {
-    .card {
-        width: 300px;
-
-        &_content {
-            height: 450px;
-        }
-    }
+.card::after {
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: -7px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
-// Disable hover effects on touch devices
-
-@media (hover: none) and (pointer: coarse) {
-    .card {
-        &:hover {
-            transform: none;
-        }
-
-        .card_overview {
-            opacity: 0;
-            visibility: hidden;
-        }
-    }
+.card:hover::after {
+    background: repeating-linear-gradient(
+        -45deg,
+        rgba(0, 0, 0, 0.3) 0,
+        rgba(0, 0, 0, 0.3) 2px,
+        transparent 2px,
+        transparent 4px
+    );
 }

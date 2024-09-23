@@ -2,6 +2,7 @@
 
     &_header {
         margin-bottom: 1.5rem;
+        text-align: center;
     }
 
     &_list {
@@ -16,10 +17,7 @@
     }
 
     &_link {
-        min-width: 200px;
-        max-width: 225px;
         flex: 1 1 150px;
-        aspect-ratio: 2 / 3;
         list-style-type: none;
         display: flex;
         align-items: stretch;
@@ -37,5 +35,17 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+}
+
+// Styles for mobile devices
+
+@media (min-width: 565px) {
+    .grid {
+        &_link {
+            min-width: 200px;
+            max-width: 225px;
+            aspect-ratio: 2 / 3;
+        }
     }
 }

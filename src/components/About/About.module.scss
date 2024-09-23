@@ -1,4 +1,6 @@
 .section {
+    font-size: 1.2rem;
+
     &_header {
         margin-bottom: 0.1rem;
     }
@@ -6,4 +8,15 @@
     &_paragraph {
         margin-bottom: 2rem;
     }
+}
+
+// Styles for large screens
+
+@media (min-width: 760px) {
+
+    .section {
+        max-width: 75%;
+        margin-inline: auto;
+    }
+
 }

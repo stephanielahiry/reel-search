@@ -7,7 +7,19 @@ import useSWR from "swr";
 import { useEffect } from "react";
 import Loading from "@/components/Loading/Loading";
 
-const fetcher = (url: string) => fetch(url).then(res => res.json());
+// const fetcher = (url: string) => fetch(url).then(res => res.json());
+const fetcher = async (url: string) => {
+  try {
+    const res = await fetch(url);
+    if (!res.ok) {
+      throw new Error('Failed to fetch');
+    }
+    return res.json();
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    throw error;
+  }
+};
 
 const MovieDetailPage: React.FC = () => {
   const params = useParams();
@@ -26,14 +38,16 @@ const MovieDetailPage: React.FC = () => {
   const goBack = (): void => {
     router.back();
   };
+
+  if (isLoading) {
+    return <Loading loadingText={'Loading movie details...'} />;
+  }
+
+  if (error || !movie) {
+    return <h2>There was an error loading details for this movie. Please try again later.</h2>;
+  }
     
-  return (
-    <>
-      {isLoading && <Loading loadingText={'Loading movie details...'}/>}
-      {movie && <MovieDetail goBack={goBack} movie={movie}/>}
-      {error && <h2>There was an error loading this movie.</h2>}
-    </>
-  );
+  return <MovieDetail goBack={goBack} movie={movie}/>;
 
 };
   

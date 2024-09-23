@@ -1,11 +1,11 @@
 import Loading from '@/components/Loading/Loading';
 import '@/styles/globals.scss';
 import { Suspense } from 'react';
-import manrope from "@/app/fonts";
+import { manrope } from "@/app/fonts";
 import Layout from "@/components/Layout/Layout";
 
 export const metadata = {
-  title: 'Movie Finder',
+  title: 'Reel Search',
   description: 'An Application to Search for Movies',
 }
 

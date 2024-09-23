@@ -2,6 +2,7 @@
 
 import styles from './MovieDetail.module.scss';
 import { Movie } from '../../types/Movie';
+import Image from "next/image";
 
 export interface MovieDetailProps {
     movie: Movie;
@@ -13,12 +14,18 @@ const MovieDetail: React.FC<MovieDetailProps> = ({ movie, goBack }: MovieDetailP
 
     return (
         <section className={styles.section}>
-            <button 
-                className={styles.section_button}
+            <a
+                className={styles.section_link}
                 onClick={goBack}>
-                Go Back
-            </button>
-            <h2 className={styles.section_title}>Movie Details for {title}</h2>
+                <Image
+                    className={styles.section_linkIcon}
+                    src="/back-arrow.svg"
+                    alt="Previous Page Icon"
+                    width={30}
+                    height={30}/>
+                <span className={styles.section_linkText}>Back</span>
+            </a>
+            <h1 className={styles.section_title}>Movie Details for {title}</h1>
             <div className={styles.section_detail}>
                 <div>
                     <img
@@ -36,7 +43,7 @@ const MovieDetail: React.FC<MovieDetailProps> = ({ movie, goBack }: MovieDetailP
                     )}
                     <div>
                         <strong>Overview: </strong> 
-                        <em>{formattedOverview}</em>
+                        {formattedOverview}
                     </div>
                     {runtime != null && runtime > 0 && (
                         <div>

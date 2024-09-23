@@ -1,8 +1,11 @@
-import { Manrope } from 'next/font/google';
+import { Manrope, Limelight } from 'next/font/google';
 
-const manrope = Manrope({
+export const manrope = Manrope({
     subsets: ['latin'],
-    weight: ['400', '500', '600', '700']
+    weight: ['400', '500', '600', '700'],
 });
 
-export default manrope;
+export const limelight = Limelight({
+    weight: '400',
+    subsets: ['latin'],
+});

@@ -4,6 +4,11 @@
         margin-bottom: 1rem;
     }
 
+    &_title {
+        font-size: 2.2rem;
+        font-weight: 600;
+    }
+
     &_detail {
         display: grid;
         gap: 2rem;
@@ -11,22 +16,71 @@
     }
 
     &_content {
+        font-size: 1.2rem;
         display: flex;
         flex-direction: column;
         gap: 1rem;
+    }
+
+    &_link {
+        font-weight: 600;
+        display: flex;
+        gap: 0.1rem;
+        align-items: center;
+        font-size: 1.5rem;
+        margin-left: -0.45rem;
+        width: fit-content;
+        margin-bottom: 1.5rem;
+        position: relative;
+
+        &Text {
+            //margin-left: -0.1rem;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: -0.3rem;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-color);
+            transition: width 0.4s ease, left 0.4s ease;
+        }
+
+        &:hover::before {
+            width: 100%;
+            left: 0.4rem;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     &_image {
         height: auto;
         width: 275px;
         margin-bottom: 0.5rem;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px var(--box-shadow); 
+        border: 2px solid var(--medium-grey);
+        //border-radius: 8px;
+        //box-shadow: 0 4px 8px var(--box-shadow);
     }
 
     &_label {
         font-weight: bold;
     }
+}
+
+// Styles for large screens
+
+@media (min-width: 760px) {
+
+    .section {
+        max-width: 75%;
+        margin-inline: auto;
+    }
+
 }
 
 // Styles for tablets
