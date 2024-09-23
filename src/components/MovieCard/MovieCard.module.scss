@@ -43,11 +43,12 @@
         visibility: hidden;
         z-index: 2;
         transition: opacity 400ms ease-in-out, visibility 400ms ease-in-out;
+        font-weight: 400;
     }
 
     &_hoverTitle {
-        font-size: 1.1rem;
-        font-weight: bold;
+        font-size: 1.3rem;
+        font-weight: 800;
         margin-bottom: 0.3rem;
     }
 }

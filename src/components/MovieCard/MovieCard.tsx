@@ -31,22 +31,6 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie }: MovieCardProps) => {
             <p>{truncatedText}</p>
           </div>
         </div>
-        {/*<div className={styles.container}>*/}
-        {/*  <div className={styles.card}>*/}
-        {/*    <div className={styles.imgBx}>*/}
-        {/*        <img*/}
-        {/*            className={styles.card_image}*/}
-        {/*            src={image}*/}
-        {/*            alt={`Poster for ${title}`}*/}
-        {/*        />*/}
-        {/*    </div>*/}
-        {/*    <div className={styles.content}>*/}
-        {/*      <div className={styles.contentBx}>*/}
-        {/*        <h3>Jane <br/><span>Web Developer</span></h3>*/}
-        {/*      </div>*/}
-        {/*    </div>*/}
-        {/*  </div>*/}
-        {/*</div>*/}
       </div>
   );
 }
