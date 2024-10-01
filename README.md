@@ -1,6 +1,6 @@
-# Movie Finder
+# Reel Search
 
-Movie Finder is a [Next.js](https://nextjs.org/) application designed to help users search for movies. It is bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Reel Search is a [Next.js](https://nextjs.org/) application designed to help users search for movies. It is bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Table of Contents
 
