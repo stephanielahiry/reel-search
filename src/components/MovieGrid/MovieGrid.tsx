@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Movie } from "../../types/Movie";
 import MovieCard from "../MovieCard/MovieCard";
 import styles from "./MovieGrid.module.scss";
@@ -16,9 +15,7 @@ const MovieGrid: React.FC<MovieGridProps> = ({ movies, headerText }: MovieGridPr
             <ul className={styles.grid_list}>
                 {movies?.map((movie) => (
                     <li key={movie.id} className={styles.grid_item}>
-                        <Link href={`/${movie.id}`} className={styles.grid_link}>
-                            <MovieCard movie={movie} />
-                        </Link>
+                        <MovieCard movie={movie} />
                     </li>
                 ))}
             </ul>

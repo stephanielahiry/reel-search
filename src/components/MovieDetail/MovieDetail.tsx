@@ -22,7 +22,7 @@ const MovieDetail: React.FC<MovieDetailProps> = ({ movie, goBack }: MovieDetailP
                     alt="Previous Page Icon"
                     width={30}
                     height={30}/>
-                <span className={styles.section_linkText}>Back</span>
+                <span>Back</span>
             </a>
             <h1 className={styles.section_title}>Movie Details for {title}</h1>
             <div className={styles.section_detail}>

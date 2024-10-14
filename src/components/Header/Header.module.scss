@@ -12,23 +12,22 @@
         &Link {
             display: flex;
             justify-content: space-between;
-            align-items: baseline;
+            align-items: center;
             gap: 0.25rem;
             color: var(--accent-color);
             font-weight: 600;
             letter-spacing: -0.8px;
-            font-size: 2.5rem;
+            font-size: 1.75rem;
         }
 
         &Image {
-            margin-top: 0.4rem;
+            margin-top: 0.38rem;
         }
     }
 
     &_navigation {
         grid-row: 2;
         margin-left: -0.3rem;
-        margin-top: 0.3rem;
 
         &List {
             display: flex;
@@ -37,7 +36,6 @@
 
         &Item {
             font-weight: lighter;
-            font-size: 1.2rem;
             list-style-type: none;
             position: relative;
             display: block;
@@ -120,7 +118,7 @@
 
     &_search {
         grid-row: 1;
-        align-self: center;
+        align-self: end;
     }
 
     &_resize {
@@ -133,6 +131,16 @@
 // Styles for large tablets
 
 @media (max-width: 1170px) {
+
+    .header {
+        grid-template-columns: 2fr 1.5fr;
+    }
+
+}
+
+// Styles for small tablets
+
+@media (max-width: 760px) {
 
     .header {
         grid-template-columns: 1fr 2fr 1fr;
@@ -153,31 +161,15 @@
             }
         }
 
-        &_search, &_resize {
+        &_search {
             grid-row: 3;
         }
 
         &_search {
-            margin-top: 1.3rem;
+            margin-top: 1rem;
             grid-column: 2;
         }
 
-        &_resize {
-            margin-left: 1rem;
-            grid-column: 3;
-            justify-self: start;
-            align-self: end;
-        }
-    }
-
-}
-
-// Styles for small tablets
-
-@media (max-width: 760px) {
-
-    .header {
-        grid-template-columns: 1fr 4fr 1fr;
     }
 
 }
@@ -187,7 +179,7 @@
 @media (max-width: 575px) {
 
     .header {
-        grid-template-columns: 5fr 1fr;
+        grid-template-columns: 1fr;
 
         &_navigation {
             grid-row: 2;
@@ -203,12 +195,7 @@
         }
 
         &_search {
-            margin-top: 1.3rem;
             grid-column: 1;
-        }
-
-        &_resize {
-            grid-column: 2;
         }
     }
 

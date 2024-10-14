@@ -4,8 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Search from '../Search/Search';
 import styles from './Header.module.scss';
-import {limelight, pacifico} from "@/app/fonts";
-import TextResize from "@/components/TextResize/TextResize";
+import {pacifico} from "@/app/fonts";
 
 const Header: React.FC = () => {
 
@@ -20,8 +19,8 @@ const Header: React.FC = () => {
                             <Image
                                 src="/movie-icon.svg"
                                 alt="Movie Finder Icon"
-                                width={40}
-                                height={40}/>
+                                width={30}
+                                height={30}/>
                         </div>
                         <span className={pacifico.className}>Reel Search</span>
                     </Link>
@@ -35,18 +34,13 @@ const Header: React.FC = () => {
                         </Link>
                     </li>
                     <li className={styles.header_navigationItem}>
-                        <Link href="/about">
-                            About
-                        </Link>
-                    </li>
-                    <li className={styles.header_navigationItem}>
                         <Link href="/">
                             Popular
                         </Link>
                     </li>
                     <li className={styles.header_navigationItem}>
                         <Link href="/top-rated">
-                            Acclaimed
+                            Top Rated
                         </Link>
                     </li>
                     <li className={styles.header_navigationItem}>
@@ -58,9 +52,6 @@ const Header: React.FC = () => {
             </nav>
             <div className={styles.header_search}>
                 <Search/>
-            </div>
-            <div className={styles.header_resize}>
-                <TextResize/>
             </div>
         </header>
     )

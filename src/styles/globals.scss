@@ -37,7 +37,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
-  font-size: 2rem;
   font-weight: 600;
 }
 
@@ -47,7 +46,6 @@ a {
 }
 
 button {
-  font-size: 1.2rem;
   padding: 0.75rem 1.5rem;
   border: none;
   background-color: var(--accent-color);
@@ -68,8 +66,7 @@ button {
 }
 
 input {
-  font-size: 1.2rem;
-  padding: 0.68rem 1rem;
+  padding: 0.65rem 1rem 0.6rem;
   border: 2px solid var(--light-grey);
   width: 100%;
   transition: border-color 0.3s;
@@ -86,6 +83,14 @@ input {
 }
 
 // Styles for tablets
+
+@media (max-width: 760px) {
+
+  html {
+    font-size: 14px;
+  }
+
+}
 
 @media (max-width: 575px) {
 
