@@ -2,7 +2,7 @@
   --accent-color: #6482d9f2;
   --accent-color-dark: #3f577f;
   --background-color: #fdfdfd;
-  --lightest-grey: #f4f4f4;
+  --lightest-grey: #f7f7f7;
   --light-grey: #cccccc;
   --gray: #b4b4b4;
   --medium-grey: #666666;
@@ -82,9 +82,7 @@ input {
   }
 }
 
-// Styles for tablets
-
-@media (max-width: 760px) {
+@media (max-width: 1170px) {
 
   html {
     font-size: 14px;
@@ -94,8 +92,8 @@ input {
 
 @media (max-width: 575px) {
 
-  button, input {
-    font-size: 1rem;
+  html {
+    font-size: 12px;
   }
 
   button {

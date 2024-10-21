@@ -1,0 +1,20 @@
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  &_link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.25rem;
+    color: var(--accent-color);
+    font-weight: 600;
+    letter-spacing: -0.8px;
+    font-size: 1.75rem;
+  }
+
+  &_image {
+    margin-top: 0.38rem;
+  }
+}

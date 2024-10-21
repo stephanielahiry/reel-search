@@ -1,7 +1,5 @@
-"use client";
-
 import styles from './MovieCard.module.scss';
-import { Movie } from '../../types/Movie';
+import { Movie } from '@/types/Movie';
 import Link from "next/link";
 import Image from "next/image";
 
@@ -10,7 +8,7 @@ export interface MovieCardProps {
 }
 
 const MovieCard: React.FC<MovieCardProps> = ({ movie }: MovieCardProps) => {
-  const { overview, poster_path, id, title } = movie;
+  const { overview, poster_path, title } = movie;
   const truncatedText = overview && overview?.length > 200
     ? overview.slice(0, 200) + '...'
     : movie.overview;

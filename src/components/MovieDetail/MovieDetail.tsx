@@ -1,42 +1,41 @@
-"use client"
-
 import styles from './MovieDetail.module.scss';
-import { Movie } from '../../types/Movie';
+import { Movie } from '@/types/Movie';
 import Image from "next/image";
 
 export interface MovieDetailProps {
     movie: Movie;
     goBack: () => void;
-};
+}
 
 const MovieDetail: React.FC<MovieDetailProps> = ({ movie, goBack }: MovieDetailProps) => {
     const { title, imageURL, formattedDate, formattedGenres, formattedOverview, runtime } = movie;
 
     return (
-        <section className={styles.section}>
+        <section className={styles.detail}>
             <a
-                className={styles.section_link}
+                className={styles.detail_link}
                 onClick={goBack}>
                 <Image
                     src="/back-arrow.svg"
                     alt="Previous Page Icon"
-                    width={30}
+                    className={styles.detail_linkImage}
+                    width={25}
                     height={30}/>
-                <span>Back</span>
+                <span className={styles.detail_linkText}>Back</span>
             </a>
-            <h1 className={styles.section_title}>Movie Details for {title}</h1>
-            <div className={styles.section_detail}>
+            <h1 className={styles.detail_title}>Movie Details for {title}</h1>
+            <div className={styles.detail_info}>
                 <div>
                     <img
-                        className={styles.section_image}
+                        className={styles.detail_image}
                         src={imageURL}
                         alt={`Poster for ${title}`}
                         />
                 </div>
-                <div className={styles.section_content}>
+                <div className={styles.detail_content}>
                     {formattedGenres && (
                         <div>
-                            <span className={styles.section_label}>Genre: </span> 
+                            <span className={styles.detail_label}>Genre: </span>
                             {formattedGenres}
                         </div>
                     )}
@@ -46,13 +45,13 @@ const MovieDetail: React.FC<MovieDetailProps> = ({ movie, goBack }: MovieDetailP
                     </div>
                     {runtime != null && runtime > 0 && (
                         <div>
-                            <strong className={styles.section_label}>Runtime: </strong> 
+                            <strong className={styles.detail_label}>Runtime: </strong>
                             {runtime} {runtime === 1 ? "Minute" : "Minutes"}
                         </div>
                     )}
                     {formattedDate && (
                         <div>
-                            <span className={styles.section_label}>Release Date: </span> 
+                            <span className={styles.detail_label}>Release Date: </span>
                             {formattedDate}
                         </div>
                     )}
